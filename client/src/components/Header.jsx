@@ -8,7 +8,7 @@ function Header() {
       <Navbar bg='primary' variant='dark' expand='lg' collapseOnSelect>
         <Container>
           <LinkContainer to='/'>
-            <Navbar.Brand>React-Ecommerce</Navbar.Brand>
+            <Navbar.Brand>EcomMERN</Navbar.Brand>
           </LinkContainer>
           <Nav className='ml-auto'>
             <LinkContainer to='/cart'>
