@@ -8,11 +8,13 @@ span {
 }
 
 h1{
+  font-weight: 450;
   font-size: 1.4rem;
   padding: 1rem;
 }
 
 h2{
+  font-weight: 400;
   font-size: 1.4rem;
   padding: 0.5rem;
 }

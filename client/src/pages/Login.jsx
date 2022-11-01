@@ -16,14 +16,13 @@ function Login() {
   const userLogin = useSelector(state => state.userLogin)
   const {loading, error, userInfo } = userLogin
 
-  const redirect = search.has('redirect') ? search.get('redirect') : '/'
+  const redirect = search.has('redirect') ? search.get('redirect') : ''
 
   const navigate = useNavigate()
 
-
   useEffect(() => {
     if(userInfo) {
-        navigate(redirect)
+        navigate(`/${redirect}`)
     }
   }, [navigate, userInfo, redirect])
 

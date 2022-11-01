@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const orderSchema = mongoose.Schema(
   {
-    name: {
+    user: {
       type: mongoose.Types.ObjectId,
       required: true,
       ref: 'User',
@@ -35,6 +35,7 @@ const orderSchema = mongoose.Schema(
     shippingAddress: {
       address: { type: String, required: true },
       city: { type: String, required: true },
+      state: { type: String, required: true },
       postalCode: { type: String, required: true },
       country: { type: String, required: true },
     },
@@ -43,42 +44,42 @@ const orderSchema = mongoose.Schema(
       required: true,
     },
     paymentResult: {
-        id: { type: String },
-        status: { type: String },
-        update_time: { type: String },
-        email_address: { type: String },
+      id: { type: String },
+      status: { type: String },
+      update_time: { type: String },
+      email_address: { type: String },
     },
     taxPrice: {
       type: Number,
       required: true,
-      default: 0.0
+      default: 0.0,
     },
     shippingPrice: {
-        type: Number,
-        required: true,
-        default: 0.0
-      },
-      totalPrice: {
-        type: Number,
-        required: true,
-        default: 0.0
-      },
-      isPaid: {
-        type: Boolean,
-        required: true,
-        default: false
-      },
-      paidAt: {
-        type: Date
-      },
-      isDelivered: {
-        type: Boolean,
-        required: true,
-        default: false
-      },
-      DeliveredAt: {
-        type: Date
-      },
+      type: Number,
+      required: true,
+      default: 0.0,
+    },
+    totalPrice: {
+      type: Number,
+      required: true,
+      default: 0.0,
+    },
+    isPaid: {
+      type: Boolean,
+      required: true,
+      default: false,
+    },
+    paidAt: {
+      type: Date,
+    },
+    isDelivered: {
+      type: Boolean,
+      required: true,
+      default: false,
+    },
+    DeliveredAt: {
+      type: Date,
+    },
   },
   {
     timestamps: true,
