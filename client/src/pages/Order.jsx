@@ -62,7 +62,6 @@ function Order() {
 
   const successPaymentHandler = (paymentResult) => {
     dispatch(payOrder(orderId, paymentResult))
-    console.log('success')
   }
 
   return loading ? (
