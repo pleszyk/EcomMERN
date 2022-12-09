@@ -3,7 +3,7 @@ import { FaShoppingCart, FaUser } from 'react-icons/fa';
 import { LinkContainer } from 'react-router-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../actions/userActions';
-import { SiMongodb, SiExpress, SiReact, SiNodedotjs } from 'react-icons/si'
+// import { SiMongodb, SiExpress, SiReact, SiNodedotjs } from 'react-icons/si'
 
 function Header() {
   const userLogin = useSelector((state) => state.userLogin);
@@ -19,7 +19,7 @@ function Header() {
       <Navbar bg='primary' variant='dark'>
         <Container>
           <LinkContainer to='/'>
-            <Navbar.Brand><SiMongodb/><SiExpress/> <SiReact/> <SiNodedotjs/> EcomMERN</Navbar.Brand>
+            <Navbar.Brand>MernShop</Navbar.Brand>
           </LinkContainer>
           <Nav className='ml-auto'>
             <LinkContainer to='/cart'>
